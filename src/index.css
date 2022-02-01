@@ -1,0 +1,183 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.fondo-movimiento{
+    width: 100%;
+    height: 15rem;
+    background-image: url(../src/assets/img/header.webp);
+    background-size: 250%;
+    animation: movimiento 30s infinite linear alternate;
+}
+@keyframes movimiento{
+    from{
+        background-position:bottom left ;
+    }to{
+        background-position:top right ;
+    }
+}
+@media (min-width: 550px) {
+    .fondo-movimiento{
+        height: 28rem;
+        background-size: 150%;
+        animation: movimiento 20s infinite linear alternate;
+    }
+} 
+@media (min-width: 768px) {
+    .fondo-movimiento{
+        height: 34rem;
+        background-size: 120%;
+        animation: movimiento 20s infinite linear alternate;
+    }
+} 
+
+.fondo-movimiento-2{
+    width: 100%;
+    height: 50rem;
+    background-image: url(../src/assets/img/header.jpg);
+    background-repeat:repeat-y ;
+    background-size: 250%;
+    animation: movimiento 30s infinite linear alternate;
+}
+@keyframes movimiento{
+    from{
+        background-position:bottom left ;
+    }to{
+        background-position:top right ;
+    }
+}
+@media (min-width: 480px) {
+    .fondo-movimiento-2{
+        height: 32rem;
+        background-size: 150%;
+        animation: movimiento 20s infinite linear alternate;
+    }
+} 
+@media (min-width: 768px) {
+    .fondo-movimiento-2{
+        height: 43rem;
+        background-size: 120%;
+        animation: movimiento 20s infinite linear alternate;
+    }
+} 
+
+
+
+/* margen portafolio img */
+.ml-90 {
+    margin-left: 90px;
+}
+
+.mr--90{
+    margin-left: -90px;
+}
+
+.bg-herramientas{
+    background: #181818;
+}
+
+.neomorfismo{
+   height: 450px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    .neomorfismo{
+        height: 600px;
+        margin-top: 25px;
+    }
+} 
+
+.neomorfismo::before{
+    content: "";
+    background-image: conic-gradient(
+        #01bf71 20deg,
+        transparent 120deg
+    );
+    width: 400%;
+    height: 400%;
+    position: absolute;
+    animation: rotate 6s linear infinite;
+}
+.neomorfismo::after{
+    width: 97%;
+    height: 97%;
+    background: #101010;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 70px;
+    padding-top: 20px;
+    text-align: center;
+    content: 'HTML, CSS JavaScript NodeJs ReactJS Boostrap S.Component Taildwind Github Netlify';
+    color: #01bf71;
+    font-size: large;
+    letter-spacing: 5px;
+    line-height:40px ;
+    box-shadow: inset 20px 20px 20px #0000008c;
+    
+    position: absolute;
+}
+@media (min-width: 550px) {
+    .neomorfismo::after{
+        width: 97%;
+        height: 97%;
+        padding-left:250px;
+        padding-top: 20px;
+        font-size: 24px;
+        line-height:40px ;
+    }
+} 
+
+@media (min-width: 768px) {
+    .neomorfismo::after{
+        width: 97%;
+        height: 97%;
+        padding-left: 180px;
+        padding-top: 22px;
+        font-size: 30px;
+        line-height:60px ;
+    }
+} 
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+@media (max-width: 768px) {
+        .ocultar{
+        display: none;
+    }
+} 
+.heigth-cv{
+    max-height: 100%;
+    height: 20%;
+}
+ 
+.h-cel-tablet{
+    height: 700px;
+}
+
+@media (min-width: 768px) {
+    .height-sobre-mi{
+        height: 700px;
+    }
+} 
